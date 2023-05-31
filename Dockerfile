@@ -1,5 +1,7 @@
 FROM node:18.6.0-alpine
 
+ARG REACT_APP_API_BASE_URL
+
 WORKDIR /usr/src/app
 
 COPY package.json .

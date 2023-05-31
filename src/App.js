@@ -7,7 +7,7 @@ const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 function App() {
   const [fade, setFade] = useState(false);
   const [ducks, setDucks] = useState([]);
-
+console.log(process.env);
   const rndInt = () => Math.floor(Math.random() * 50) + 1
 
 

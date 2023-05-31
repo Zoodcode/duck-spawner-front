@@ -3,7 +3,7 @@ import "./App.css";
 import duckSound from "./duck-sound.wav";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 function App() {
   const [fade, setFade] = useState(false);
   const [ducks, setDucks] = useState([]);
@@ -12,12 +12,11 @@ function App() {
 
 
   const triggerFade = () => {
-    console.log('here');
     if(fade){
       playAudio()
 
       axios
-      .post("http://localhost:3000", { property: rndInt()*100 })
+      .post(BASE_URL, { property: rndInt()*100 })
       .then(async (res) => {
         console.log(res);
       });
@@ -31,7 +30,7 @@ function App() {
     });
   };
   async function fetchDucks() {
-    let res = await axios.get("http://localhost:3000");
+    let res = await axios.get(BASE_URL);
     setDucks(res.data);
   }
 

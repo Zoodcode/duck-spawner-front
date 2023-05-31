@@ -1,0 +1,79 @@
+*{
+  transition: all 0.3s ;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 30vmin;
+  margin-top: -20rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+ 
+@media (prefers-reduced-motion: no-preference) {
+  .visibleClass {
+    animation: App-logo-spin .8s linear;
+  }
+  .fadedClass {
+    animation: none;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.zc {
+  background-color: #feef46;
+  font-weight: 900;
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: #282c34;
+}
+
+.warehouse{
+  height: 8rem;
+  width: 80%;
+  display: flex;
+  gap: 1.5rem;
+  padding-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.ducks{
+  height: 8rem;
+}
+
+@keyframes App-logo-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(5deg);
+  }
+  20% {
+    transform: rotate(-5deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
+}
+
